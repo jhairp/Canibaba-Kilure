@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbci81ajdi74m"]
+
+[ext_resource type="Texture2D" uid="uid://cdesc5g0qmaq7" path="res://assets/escenario/Movima1-1.png.png" id="1_gbp8n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u6b4o"]
+size = Vector2(541, 18)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_gbp8n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 135)
+shape = SubResource("RectangleShape2D_u6b4o")
+metadata/_edit_group_ = true

@@ -1,0 +1,47 @@
+[gd_scene load_steps=9 format=3 uid="uid://b4bwif3acqp1b"]
+
+[ext_resource type="Texture2D" uid="uid://ctwcgm5ucjbt0" path="res://assets/kenney Zombi/PNG/LUIS/Luis (Player)/Luis_caminarver4-1.png.png" id="1_0qa1s"]
+[ext_resource type="Script" uid="uid://ddjo5ctkxcxg0" path="res://PersonajLuis.gd" id="1_65dfl"]
+[ext_resource type="Texture2D" uid="uid://bv5r57naodvjh" path="res://assets/kenney Zombi/PNG/LUIS/Luis (Player)/Luis_caminar-2.png.png" id="2_65dfl"]
+[ext_resource type="Texture2D" uid="uid://df5lot1sdp6so" path="res://assets/kenney Zombi/PNG/LUIS/Luis (Player)/Luis_caminar-1.png.png" id="3_6us8v"]
+[ext_resource type="Texture2D" uid="uid://dlj3sknjc0vnr" path="res://assets/kenney Zombi/PNG/LUIS/Luis (Player)/Luis_herido.png.png" id="5_4pr0w"]
+[ext_resource type="Texture2D" uid="uid://c1qdetqm0sa5f" path="res://assets/kenney Zombi/PNG/LUIS/Luis (Player)/Luis_golpear.png.png" id="6_6o468"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_181k0"]
+size = Vector2(61, 88)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5xekr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0qa1s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_65dfl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6us8v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4pr0w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6o468")
+}],
+"loop": true,
+"name": &"acciones",
+"speed": 5.0
+}]
+
+[node name="PersonajeLuis" type="CharacterBody2D"]
+script = ExtResource("1_65dfl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 10)
+shape = SubResource("RectangleShape2D_181k0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_5xekr")
+animation = &"acciones"
+
+[node name="Camera2D" type="Camera2D" parent="."]
