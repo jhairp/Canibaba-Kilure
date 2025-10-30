@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Los ojos del bosque</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: radial-gradient(circle at top, #0f172a 0%, #020617 55%, #000 100%);
+      --card: rgba(15, 23, 42, 0.35);
+      --accent: #22d3ee;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+    }
+    body {
+      margin: 0;
+      background: var(--bg);
+      font-family: "Segoe UI", sans-serif;
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background: rgba(2, 6, 23, 0.6);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(148,163,184,0.2);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.3rem;
+      color: #22d3ee;
+    }
+    nav a {
+      color: var(--muted);
+      margin-left: 1rem;
+      text-decoration: none;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      color: var(--muted);
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      line-height: 1.6;
+    }
+
+    .preview {
+      position: relative;
+      display: inline-block;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 0 40px rgba(34, 211, 238, 0.2);
+    }
+
+    .preview img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .preview:hover img {
+      transform: scale(1.05);
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: linear-gradient(180deg, transparent, rgba(0,0,0,0.8));
+      color: #fff;
+      padding: 1.2rem;
+      font-size: 1rem;
+      text-align: left;
+    }
+
+    .characters {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 3rem;
+    }
+
+    .char-card {
+      background: rgba(15, 23, 42, 0.5);
+      border: 1px solid rgba(148,163,184,0.1);
+      border-radius: 1rem;
+      width: 240px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      text-align: center;
+    }
+
+    .char-card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .char-card h3 {
+      margin: 0.8rem 0 0.3rem;
+      color: #22d3ee;
+    }
+
+    .char-card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      padding: 0 1rem 1rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+      padding: 2rem 1rem;
+      margin-top: auto;
+      border-top: 1px solid rgba(15, 23, 42, .4);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Los ojos del bosque</h1>
+    <nav>
+      <a href="#historia">Historia</a>
+      <a href="#personajes">Personajes</a>
+      <a href="#galeria">Galería</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="historia">
+      <h2>Una historia de miedo y esperanza</h2>
+      <p>
+        Luis Choque, un niño valiente, se interna en un bosque maldito para encontrar a su hermanito desaparecido.
+        No sabe que entre los árboles se oculta el <strong>Canibaba Kilure</strong>, una entidad capaz de
+        <strong>poseer cuerpos de los muertos</strong>.  
+        “Los ojos del bosque” combina exploración, suspenso y leyendas bolivianas en un mundo pixelado hecho con Godot.
+      </p>
+
+      <!-- 🌲 Imagen del escenario con Luis -->
+      <div class="preview">
+       <img src="ecena.png" alt="Escenario del bosque" />
+        <div class="overlay">
+          Escenario del bosque: el punto de partida donde Luis comienza su búsqueda.
+        </div>
+      </div>
+    </section>
+
+    <section class="hero" id="personajes">
+      <h2>Personajes principales</h2>
+      <div class="characters">
+        <!-- 🧒 Luis Choque -->
+        <div class="char-card">
+          <h3>Luis Choque</h3>
+          <p>El protagonista. Un niño que enfrenta su miedo para rescatar a su hermano. Puede caminar, atacar y resistir el peligro del bosque.</p>
+        </div>
+
+        <!-- 👹 Canibaba Kilure -->
+        <div class="char-card">
+          <h3>Canibaba Kilure</h3>
+          <p>El espíritu maligno del bosque. Puede poseer cuerpos de zombies y controlar la oscuridad. Su verdadera forma aparece al final del juego.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero" id="galeria">
+      <h2>Galería del juego</h2>
+      <p>Vistas del entorno, sprites y momentos importantes durante el desarrollo.</p>
+      <div class="characters">
+        <div class="char-card">
+          <h3>El bosque de noche</h3>
+          <p>Sombras y ojos entre los árboles. Todo parece vivo.</p>
+        </div>
+        <div class="char-card">
+          <h3>Zombie poseído</h3>
+          <p>Uno de los cuerpos que el Canibaba usa como marioneta.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    “Los ojos del bosque” · Proyecto Godot creado por <strong>Jhair y equipo</strong> · 2025
+  </footer>
+</body>
+</html>
