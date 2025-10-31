@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://bx47strd882no"]
+
+[ext_resource type="Script" uid="uid://ckmkghacy7xud" path="res://primer_escena.gd" id="1_5wh4t"]
+[ext_resource type="PackedScene" uid="uid://8kfoeb3qag8t" path="res://ecenas/Bosque/Bosque.tscn" id="1_11v24"]
+[ext_resource type="PackedScene" uid="uid://b4bwif3acqp1b" path="res://ecenas/PersonajeLuis/PersonajeLuis.tscn" id="2_ohr82"]
+[ext_resource type="PackedScene" uid="uid://c3rvimstxwss2" path="res://ecenas/zombiBeniano/zombi_beniano.tscn" id="4_6tw4o"]
+
+[node name="Primer-Ecena" type="Node2D"]
+script = ExtResource("1_5wh4t")
+
+[node name="Bosque" parent="." instance=ExtResource("1_11v24")]
+position = Vector2(0, 28)
+
+[node name="PersonajeLuis" parent="." instance=ExtResource("2_ohr82")]
+
+[node name="zombiBeniano" parent="." instance=ExtResource("4_6tw4o")]
+position = Vector2(316, 8)

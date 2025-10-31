@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://b10g3xfvcnutf"]
+
+[ext_resource type="Texture2D" uid="uid://d71lnx3km4es" path="res://assets/escenario/Movimaver2-2.png" id="1_roj24"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_roj24"]
+size = Vector2(1265, 51)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y2a4n"]
+size = Vector2(34, 471.5)
+
+[node name="Bosque2" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.9999999, -42.000008)
+scale = Vector2(2.325963, 1.9)
+texture = ExtResource("1_roj24")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-7, -55)
+shape = SubResource("RectangleShape2D_roj24")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-3, 326.5)
+shape = SubResource("RectangleShape2D_roj24")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-648, 117)
+shape = SubResource("RectangleShape2D_y2a4n")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(645, 119.75)
+shape = SubResource("RectangleShape2D_y2a4n")

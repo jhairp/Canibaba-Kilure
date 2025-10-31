@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://8kfoeb3qag8t"]
+
+[ext_resource type="Texture2D" uid="uid://cdesc5g0qmaq7" path="res://assets/escenario/Movima1-1.png.png" id="1_gbp8n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u6b4o"]
+size = Vector2(1256.5, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g44dr"]
+size = Vector2(21, 392)
+
+[node name="Bosque" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2.326, 2.326)
+texture = ExtResource("1_gbp8n")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0.75, 302)
+shape = SubResource("RectangleShape2D_u6b4o")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(3, -77)
+shape = SubResource("RectangleShape2D_u6b4o")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-638, 112)
+shape = SubResource("RectangleShape2D_g44dr")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(639, 112)
+shape = SubResource("RectangleShape2D_g44dr")
