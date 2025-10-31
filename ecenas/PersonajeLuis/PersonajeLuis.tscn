@@ -1,35 +1,54 @@
 [gd_scene load_steps=9 format=3 uid="uid://b4bwif3acqp1b"]
 
-[ext_resource type="Texture2D" uid="uid://ctwcgm5ucjbt0" path="res://assets/kenney Zombi/PNG/LUIS/Luis (Player)/Luis_caminarver4-1.png.png" id="1_0qa1s"]
 [ext_resource type="Script" uid="uid://ddjo5ctkxcxg0" path="res://PersonajLuis.gd" id="1_65dfl"]
-[ext_resource type="Texture2D" uid="uid://bv5r57naodvjh" path="res://assets/kenney Zombi/PNG/LUIS/Luis (Player)/Luis_caminar-2.png.png" id="2_65dfl"]
-[ext_resource type="Texture2D" uid="uid://df5lot1sdp6so" path="res://assets/kenney Zombi/PNG/LUIS/Luis (Player)/Luis_caminar-1.png.png" id="3_6us8v"]
-[ext_resource type="Texture2D" uid="uid://dlj3sknjc0vnr" path="res://assets/kenney Zombi/PNG/LUIS/Luis (Player)/Luis_herido.png.png" id="5_4pr0w"]
-[ext_resource type="Texture2D" uid="uid://c1qdetqm0sa5f" path="res://assets/kenney Zombi/PNG/LUIS/Luis (Player)/Luis_golpear.png.png" id="6_6o468"]
+[ext_resource type="Texture2D" uid="uid://cd7yt0aljw67b" path="res://assets/Luis Choque/Luis_caminarvergamejam-4.png" id="2_n23oo"]
+[ext_resource type="Texture2D" uid="uid://ds68nrs3lowtk" path="res://assets/Luis Choque/Luis_caminarvergamejam-2.png" id="3_0qa1s"]
+[ext_resource type="Texture2D" uid="uid://kyrvkxuhc1si" path="res://assets/Luis Choque/Luis_caminarvergamejam-1.png" id="4_65dfl"]
+[ext_resource type="Texture2D" uid="uid://vbpfacm4g76j" path="res://assets/Luis Choque/Luis_caminarvergamejam-5.png" id="5_0qa1s"]
+[ext_resource type="Texture2D" uid="uid://c8fmxfi8w2xj2" path="res://assets/Luis Choque/Luis_caminarvergamejam-6.png" id="5_6us8v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_181k0"]
 size = Vector2(61, 88)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_5xekr"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_0qa1s"]
+resource_name = "idle"
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_0qa1s")
+"texture": ExtResource("5_0qa1s")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_65dfl")
+"texture": ExtResource("2_n23oo")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 5.0
 }, {
+"frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_6us8v")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_6o468")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_4pr0w")
+"texture": ExtResource("5_6us8v")
 }],
 "loop": true,
-"name": &"acciones",
+"name": &"daño",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_n23oo")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_0qa1s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_65dfl")
+}],
+"loop": true,
+"name": &"walk",
 "speed": 5.0
 }]
 
@@ -41,8 +60,9 @@ position = Vector2(0.5, 10)
 shape = SubResource("RectangleShape2D_181k0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_5xekr")
-animation = &"acciones"
+position = Vector2(48, -2)
+sprite_frames = SubResource("SpriteFrames_0qa1s")
+animation = &"attack"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.3, 1.3)
