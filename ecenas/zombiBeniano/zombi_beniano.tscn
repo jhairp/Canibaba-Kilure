@@ -41,18 +41,17 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qocig"]
-size = Vector2(45, 84)
+size = Vector2(49, 84)
 
 [node name="zombiBeniano" type="CharacterBody2D" groups=["zombies"]]
 script = ExtResource("1_6qprl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-8, 0)
+position = Vector2(-18, -10)
 sprite_frames = SubResource("SpriteFrames_jpdpf")
 animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(10.5, 12)
 shape = SubResource("RectangleShape2D_qocig")
 
 [node name="Timer" type="Timer" parent="."]
