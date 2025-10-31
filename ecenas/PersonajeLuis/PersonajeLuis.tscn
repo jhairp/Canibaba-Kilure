@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b4bwif3acqp1b"]
+[gd_scene load_steps=12 format=3 uid="uid://b4bwif3acqp1b"]
 
 [ext_resource type="Script" uid="uid://ddjo5ctkxcxg0" path="res://PersonajLuis.gd" id="1_65dfl"]
 [ext_resource type="Texture2D" uid="uid://cd7yt0aljw67b" path="res://assets/Luis Choque/Luis_caminarvergamejam-4.png" id="2_n23oo"]
@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://kyrvkxuhc1si" path="res://assets/Luis Choque/Luis_caminarvergamejam-1.png" id="4_65dfl"]
 [ext_resource type="Texture2D" uid="uid://vbpfacm4g76j" path="res://assets/Luis Choque/Luis_caminarvergamejam-5.png" id="5_0qa1s"]
 [ext_resource type="Texture2D" uid="uid://c8fmxfi8w2xj2" path="res://assets/Luis Choque/Luis_caminarvergamejam-6.png" id="5_6us8v"]
+[ext_resource type="AudioStream" uid="uid://raiuy5l26yb" path="res://assets/Music/sfx/machete-al-aire.wav" id="7_5c8ch"]
+[ext_resource type="AudioStream" uid="uid://ck2nnu3k7dkkw" path="res://assets/Music/sfx/machete-cortando.wav" id="8_4pr0w"]
+[ext_resource type="AudioStream" uid="uid://cmsk6wc4sgm6p" path="res://assets/Music/sfx/pasos-en-la-tierra.wav" id="9_6o468"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_181k0"]
 size = Vector2(52, 88)
@@ -53,6 +56,7 @@ animations = [{
 }]
 
 [node name="PersonajeLuis" type="CharacterBody2D"]
+collision_mask = 4
 script = ExtResource("1_65dfl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -73,3 +77,12 @@ limit_bottom = 300
 position = Vector2(49, -12)
 sprite_frames = SubResource("SpriteFrames_0qa1s")
 animation = &"attack"
+
+[node name="SFX_MacheteAire" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_5c8ch")
+
+[node name="SFX_MacheteCorte" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_4pr0w")
+
+[node name="SFX_Pasos" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_6o468")

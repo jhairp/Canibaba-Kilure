@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bdgqx2tciqlna"]
+
+[node name="Historia" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Fondo" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1148.0
+offset_bottom = 665.0
+color = Color(0.03529412, 0.03529412, 0.03529412, 1)
+
+[node name="LabelTexto" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 90.0
+offset_right = 474.99997
+offset_bottom = 228.00002
+scale = Vector2(2.5, 2.5)
+text = "Hace mucho tiempo, en una tierra olvidada, una Bolivia post apocaliptica, dominada por almas malditas, poseídas por un ente maligno, existian dos hermanos, Luis y Juan, quienes a pesar de no tener mucho y sobrevivir cada dia, se las ingeniaban para vivir comodamente."
+fit_content = true
+
+[node name="BotonContinuar" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0

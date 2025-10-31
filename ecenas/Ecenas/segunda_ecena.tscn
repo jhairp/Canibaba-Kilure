@@ -1,11 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://cxhuj5cv43g34"]
+[gd_scene load_steps=6 format=3 uid="uid://cxhuj5cv43g34"]
 
+[ext_resource type="Script" uid="uid://ovnr8eh6hn4" path="res://ecenas/Ecenas/segunda_ecena.gd" id="1_b143p"]
 [ext_resource type="PackedScene" uid="uid://b10g3xfvcnutf" path="res://ecenas/Bosque2/Bosque2.tscn" id="1_o6ptl"]
 [ext_resource type="PackedScene" uid="uid://b4bwif3acqp1b" path="res://ecenas/PersonajeLuis/PersonajeLuis.tscn" id="2_b143p"]
+[ext_resource type="Texture2D" uid="uid://ce6m0cp2mk7yb" path="res://assets/images/Kanibaba kilure base-1.png.png" id="4_l1i4p"]
+[ext_resource type="AudioStream" uid="uid://dd80rnbbca4jh" path="res://assets/Music/musica/musica-final-del-juego.ogg" id="5_71bqa"]
 
 [node name="segunda ecena" type="Node2D"]
+script = ExtResource("1_b143p")
 
 [node name="Bosque2" parent="." instance=ExtResource("1_o6ptl")]
 
 [node name="PersonajeLuis" parent="." instance=ExtResource("2_b143p")]
-position = Vector2(-541, 468)
+position = Vector2(-579, 18)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="KanibabaKilureBase1_png" type="Sprite2D" parent="."]
+position = Vector2(469.25, -102.74999)
+scale = Vector2(2.4875002, 2.0976188)
+texture = ExtResource("4_l1i4p")
+
+[node name="MusicaFondo" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_71bqa")
