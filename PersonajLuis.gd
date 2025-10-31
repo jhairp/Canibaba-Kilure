@@ -43,11 +43,16 @@ func _physics_process(delta):
 func _attack():
 	is_attacking = true
 	anim.play("attack")
+
+	# Detectar zombies cercanos
+	for zombie in get_tree().get_nodes_in_group("zombies"):
+		if global_position.distance_to(zombie.global_position) < 35:
+			zombie.take_damage(global_position)  # Enviamos la posición del jugador
+
 	await anim.animation_finished
 	is_attacking = false
 
-	# Si sigue moviéndose, volver a caminar, si no, quedarse quieto
-	if velocity.length() > 0:
+	if velocity.length() > 0.1:
 		anim.play("walk")
 	else:
 		anim.play("idle")

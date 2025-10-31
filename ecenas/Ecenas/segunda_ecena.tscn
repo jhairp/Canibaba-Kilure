@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxhuj5cv43g34"]
+
+[ext_resource type="PackedScene" uid="uid://b10g3xfvcnutf" path="res://ecenas/Bosque2/Bosque2.tscn" id="1_o6ptl"]
+[ext_resource type="PackedScene" uid="uid://b4bwif3acqp1b" path="res://ecenas/PersonajeLuis/PersonajeLuis.tscn" id="2_b143p"]
+
+[node name="segunda ecena" type="Node2D"]
+
+[node name="Bosque2" parent="." instance=ExtResource("1_o6ptl")]
+
+[node name="PersonajeLuis" parent="." instance=ExtResource("2_b143p")]
+position = Vector2(-541, 468)
