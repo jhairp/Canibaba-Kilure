@@ -14,4 +14,4 @@ position = Vector2(0, 28)
 [node name="PersonajeLuis" parent="." instance=ExtResource("2_ohr82")]
 
 [node name="zombiBeniano" parent="." instance=ExtResource("4_6tw4o")]
-position = Vector2(316, 8)
+position = Vector2(-242, 36)
